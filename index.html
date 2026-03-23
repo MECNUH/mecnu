@@ -143,32 +143,21 @@
                                 link="https://drive.google.com/file/d/1JWQtbj1ikfvoNeDL-ML-Rn94L8l01hZZ/view?usp=drive_link"
                             />
 
-                            <button 
-                                onClick={handleReportIssue}
-                                disabled={isReporting || reportSuccess}
-                                className={`flex items-center w-full p-5 border rounded-3xl shadow-sm transition-all action-card mb-4 ${reportSuccess ? 'bg-green-50 border-green-200' : 'bg-white border-slate-100'}`}
-                            >
-                                <div className={`${reportSuccess ? 'bg-green-600' : 'bg-red-500'} text-white p-4 rounded-2xl shadow-lg mr-5`}>
-                                    {isReporting ? <div className="spinner"></div> : <i data-lucide={reportSuccess ? "check" : "wrench"} className="w-6 h-6"></i>}
-                                </div>
-                                <div className="flex-1 text-left">
-                                    <h3 className="font-bold text-zinc-800 text-lg">
-                                        {reportSuccess ? "접수 완료!" : (isReporting ? "접수 중..." : "고장/수리 접수")}
-                                    </h3>
-                                    <p className="text-xs text-zinc-400 mt-1">
-                                        {reportSuccess ? "담당자가 곧 확인하겠습니다." : "장애 발생 시 관리자에게 즉시 신고"}
-                                    </p>
-                                </div>
-                                <i data-lucide="chevron-right" className="text-zinc-300 w-6 h-6"></i>
-                            </button>
-
+                            <ActionButton 
+                                title="고장/수리 접수" 
+                                desc="카카오톡 채팅방으로 즉시 신고" 
+                                iconName="message-circle" 
+                                color="bg-yellow-400 text-black" 
+                                link="https://open.kakao.com/o/gjT0VFki" 
+                                 />
+                            
                             <ActionButton 
                                 title="관리자 통화" 
                                 desc="긴급 상황 발생 시 유선 문의" 
                                 iconName="phone" 
                                 color="bg-zinc-800" 
                                 type="link"
-                                link="tel:010-8751-3486"
+                                link="tel:061-379-7588"
                             />
 
                             <div className="mt-10 p-5 bg-blue-50/50 rounded-3xl border border-blue-100/50 flex gap-4">
